@@ -13,8 +13,8 @@
 ```bash
 > name: Diego Evangelista
 > class: Full Stack Developer
-> level: 4+ years XP
-> focus: scalable systems & real products
+> level: 5+ years XP
+> focus: IA integration & real products
 > status: ACTIVE
 ````
 
@@ -22,7 +22,7 @@
 
 ## 🧠 ABOUT_ME()
 
-Desenvolvedor full stack com foco em **arquitetura, performance e produto real**.
+Desenvolvedor full stack com foco em **integração com IA, arquitetura, performance e produto real**.
 
 Atuo ponta a ponta — da regra de negócio ao deploy — sempre priorizando:
 
@@ -140,8 +140,8 @@ function buildSystem() {
 ## 🌐 CONNECT()
 
 ```bash
-> email: aerkante@gmail.com
-> linkedin: linkedin.com/in/diego-evangelista-1507bbb4/
+> email: diegoevangelista7274@gmail.com
+> linkedin: linkedin.com/in/diegoevangelista7274/
 ```
 
 ---
