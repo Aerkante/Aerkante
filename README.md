@@ -64,19 +64,27 @@ Atuo ponta a ponta — da regra de negócio ao deploy — sempre priorizando:
 
 ### 🧮 Fibonacci
 
-> App mobile de finanças pessoais (React Native + Expo)
-> ✔️ Local-first
-> ✔️ UX rápida
-> ✔️ Integração opcional com API
+> App mobile de finanças pessoais (React Native + Expo SDK 54) — [repositório](https://github.com/Aerkante/fibonacci)
+> ✔️ Local-first: sem `EXPO_PUBLIC_API_URL`, login e sincronização ficam desligados
+> ✔️ Transações e categorias ficam no aparelho (Zustand + AsyncStorage)
+> ✔️ API opcional; a base esperada é `http://localhost:3333/api/v1`
+
+Node.js >= 18.19. No `main`: `npm install`, `cp .env.example .env`, `npm start`. No emulador Android, o host da API é `10.0.2.2`.
+
+O branch padrão do GitHub é `dev` (sem o tema in-app nem os testes). A versão de portfólio está em `main`: `git clone -b main https://github.com/Aerkante/fibonacci.git`.
 
 ---
 
 ### 🔗 Fibonacci Backend
 
-> API REST (AdonisJS 7 + Docker)
-> ✔️ JWT Auth
-> ✔️ Categorias e transações
-> ✔️ Estrutura escalável
+> API REST (AdonisJS 7 + Docker) — [repositório](https://github.com/Aerkante/fibonacci-backend)
+> ✔️ JWT Bearer em `/api/v1/auth` (register, login, refresh, logout)
+> ✔️ Categorias, transações, perfil (`/api/v1/me`) e relatórios sob `/api/v1`
+> ✔️ SQLite no `.env` local, ou Postgres, Redis, Nginx e MailHog no Compose
+
+No `main`, Node.js 24 (`.nvmrc` e imagem Docker). `npm ci`, `cp .env.example .env`, `node ace generate:key`, `npm run migration:run`, `npm run dev` (porta 3333). Saúde: `GET /` e `GET /api/health`. Rotas de negócio pedem `Authorization: Bearer`; register, login, refresh e logout não.
+
+O branch padrão também é `dev` (sem `.nvmrc` nem a suíte Japa). Use `git clone -b main https://github.com/Aerkante/fibonacci-backend.git`.
 
 ---
 
